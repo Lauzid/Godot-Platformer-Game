@@ -266,6 +266,12 @@ layer_1/tile_data = PackedInt32Array(983051, 65537, 1, 589824, 327681, 1, 104859
 [node name="player" parent="." instance=ExtResource("3_dpsxb")]
 position = Vector2(116, 138)
 
+[node name="Marker2D" parent="player/camera/Node" index="0"]
+position = Vector2(0, 0)
+
+[node name="Marker2D2" parent="player/camera/Node" index="1"]
+position = Vector2(1232, 320)
+
 [node name="BG" type="ParallaxBackground" parent="."]
 
 [node name="05" type="ParallaxLayer" parent="BG"]
@@ -313,3 +319,5 @@ motion_mirroring = Vector2(432, 0)
 scale = Vector2(1.5, 1.5)
 texture = ExtResource("8_pmy50")
 centered = false
+
+[editable path="player"]

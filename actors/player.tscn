@@ -86,6 +86,14 @@ visible = false
 limit_left = 0
 position_smoothing_enabled = true
 
+[node name="Node" type="Node" parent="camera"]
+
+[node name="Marker2D" type="Marker2D" parent="camera/Node"]
+position = Vector2(-33, -38)
+
+[node name="Marker2D2" type="Marker2D" parent="camera/Node"]
+position = Vector2(59, 16)
+
 [node name="anim" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 9)
 sprite_frames = SubResource("SpriteFrames_ktm8j")

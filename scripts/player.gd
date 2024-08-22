@@ -5,10 +5,20 @@ const SPEED = 100.0
 const JUMP_FORCE = -250.0
 
 @onready var animation := $anim as AnimatedSprite2D
+@onready var camera = $camera
+@onready var top_left = $camera/Node/Marker2D
+@onready var bottom_rigth = $camera/Node/Marker2D2
+
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var is_jumping := false
+
+func _ready():
+	camera.limit_top = top_left.position.y
+	camera.limit_left = top_left.position.x
+	camera.limit_bottom = bottom_rigth.position.y
+	camera.limit_right = bottom_rigth.position.x
 
 func _physics_process(delta):
 	# Add the gravity.
